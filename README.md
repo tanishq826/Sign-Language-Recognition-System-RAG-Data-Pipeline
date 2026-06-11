@@ -1,57 +1,87 @@
-# Hey, I'm Tanishq 👋
+# Sign Language Recognition System 
 
-**Data Engineer** · Faridabad, India · Open to remote roles worldwide
-
-🎓 B.Tech. Computer Engineering &nbsp;|&nbsp; 📊 PG Diploma in Big Data Analytics &nbsp;|&nbsp; ✅ Open to remote
-
----
-
-## About
-
-I'm a data engineer who likes turning messy, distributed data into clean, reliable pipelines. I've worked across the full DE stack — from writing PySpark jobs on Databricks to transforming data with dbt and visualising results in Power BI. My background is in Computer Engineering, backed by a PG diploma in Big Data Analytics, so I'm comfortable going deep on both the infrastructure and the analytics layer.
-
-I care about code that's readable, pipelines that don't break silently, and documentation that actually explains things.
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-brightgreen.svg)](https://streamlit.io/)
 
 ---
 
-## Projects
+## 🚀 Project Overview
+A **real-time Sign Language Recognition System** that detects hand gestures and translates them into **letters, numbers, and gestures**.  
+Works on both images and webcam input.  
 
-### 🗄️ PySpark × dbt End-to-End Data Engineering Pipeline
-A production-style data pipeline built entirely on Databricks. Raw data is ingested, processed with PySpark, transformed and tested with dbt, and served to downstream consumers. Covers medallion architecture (bronze → silver → gold), incremental models, and data quality checks.
-
-`PySpark` `dbt` `Databricks` `SQL` 
-
----
-
-### 🤟 Sign Language Recognition System
-A computer vision model that classifies sign language gestures in real time. Built with Python, trained on annotated hand gesture data, with a lightweight interface for live webcam inference. Designed to make communication more accessible.
-
-`Python` `OpenCV` `TensorFlow/Keras` `NumPy`
+- **Hand detection**: MediaPipe  
+- **Classification**: TensorFlow CNN  
+- **Real-time recognition**: Streamlit or Python script  
 
 ---
 
-## Stack
+## ✨ Features
+- Detects **letters, numbers, and gestures** from hand movements.
+- Real-time recognition with webcam.
+- Supports **image input** for testing.
+- Lightweight and easy to extend with new gestures.
 
-| Area | Tools |
-|---|---|
-| Languages | Python · SQL |
-| Data Engineering | PySpark · dbt · Hadoop |
-| Platforms | Databricks · AWS S3 · PostgreSQL |
-| Analytics & Viz | Power BI · Tableau · Pandas |
-| Other | Django · Git |
 
----
+----------------------------------------------------
+INSTALLATION STEPS
+----------------------------------------------------
+Step 1: Clone the repository
+Command:
+git clone <your-repo-url>
+cd Sign_Language_Recognition
 
-## Currently
+Step 2: Create virtual environment
+Command:
+python -m venv venv
 
-🟢 Deepening my Databricks + dbt skills — working on a more complex multi-source pipeline with real-world schemas. Also brushing up on distributed systems fundamentals and exploring Kafka for streaming data.
+Step 3: Activate virtual environment
+- Windows:
+venv\Scripts\activate
+- Mac/Linux:
+source venv/bin/activate
 
-Actively looking for **remote data engineering roles** where I can build robust pipelines from day one.
+Step 4: Install dependencies
+Command:
+pip install -r requirements.txt
 
----
+----------------------------------------------------
+USAGE
+----------------------------------------------------
+Run the Streamlit App:
+Command:
+streamlit run app.py
 
-## Let's connect
+Run via Python Script:
+Command:
+python main.py
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanishq-saini-b0bb17381)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/u/tanishqsaini_111/)
-[![DataLemur](https://img.shields.io/badge/DataLemur-1A1A2E?style=flat&logoColor=white)](https://datalemur.com/profile)
+- Place images in the 'data/' folder for recognition
+- Processed dataset is saved in 'Processed_Dataset/'
+
+----------------------------------------------------
+PROJECT STRUCTURE
+----------------------------------------------------
+Sign_Language_Recognition/
+│
+├─ Letter/                 (Raw letter images)
+├─ Number/                 (Raw number images)
+├─ Gesture/                (Raw gesture images)
+├─ Processed_Dataset/      (Cleaned dataset using MediaPipe)
+├─ models/                 (Saved trained models .keras, .h5)
+├─ app.py                  (Streamlit app)
+├─ main.py                 (Main recognition script)
+├─ requirements.txt        (Python dependencies)
+├─ .gitignore
+└─ README.txt
+
+----------------------------------------------------
+AUTHOR
+----------------------------------------------------
+Devashish W.
+CDAC Bangalore | DBDA | Aug 2025 - Feb 2026
+
+----------------------------------------------------
+LICENSE
+----------------------------------------------------
+This project is licensed under the MIT License
