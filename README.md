@@ -2,86 +2,109 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-brightgreen.svg)](https://streamlit.io/)
+[![Vector DB](https://img.shields.io/badge/VectorDB-1.x-brightgreen.svg)](https://vectordb.io/)
 
 ---
 
-## 🚀 Project Overview
-A **real-time Sign Language Recognition System** that detects hand gestures and translates them into **letters, numbers, and gestures**.  
-Works on both images and webcam input.  
+# Sign Language Recognition System — RAG Data Pipeline
 
-- **Hand detection**: MediaPipe  
-- **Classification**: TensorFlow CNN  
-- **Real-time recognition**: Streamlit or Python script  
+A scalable **Retrieval-Augmented Generation (RAG) data pipeline** built to ingest, clean, and prepare multimodal sign language dataset metadata for downstream model training. The pipeline handles **71 classification categories**, leveraging distributed processing and vector search to ensure high-quality, consistent training data.
 
 ---
 
-## ✨ Features
-- Detects **letters, numbers, and gestures** from hand movements.
-- Real-time recognition with webcam.
-- Supports **image input** for testing.
-- Lightweight and easy to extend with new gestures.
+## 🚀 Overview
 
+This project addresses a common bottleneck in ML pipelines: **inconsistent, unstructured, and hard-to-query training data**. By combining Apache Spark's distributed processing with vector database indexing, the pipeline transforms raw multimodal metadata into clean, embedded, and retrievable data assets — improving both data quality and downstream model performance for a Sign Language Recognition system.
 
-----------------------------------------------------
-INSTALLATION STEPS
-----------------------------------------------------
-Step 1: Clone the repository
-Command:
-git clone <your-repo-url>
-cd Sign_Language_Recognition
+---
 
-Step 2: Create virtual environment
-Command:
-python -m venv venv
+## ✨ Key Features
 
-Step 3: Activate virtual environment
-- Windows:
-venv\Scripts\activate
-- Mac/Linux:
-source venv/bin/activate
+- **RAG Data Pipeline Architecture**
+  Ingests, cleans, and chunks multimodal dataset metadata spanning 71 distinct classification categories.
 
-Step 4: Install dependencies
-Command:
+- **Scalable Spark Workflows**
+  Generates high-dimensional vector embeddings at scale and indexes them into a Vector Database for efficient semantic retrieval.
+
+- **Automated Data Quality Checks**
+  Detects and eliminates inconsistencies in the training dataset before they propagate downstream.
+
+- **Standardized Storage Structures**
+  Enforces consistent schemas and storage conventions across the dataset for reliable, repeatable access.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category            | Technology         |
+|---------------------|---------------------|
+| Language             | Python              |
+| Distributed Compute  | Apache Spark        |
+| Storage/Retrieval    | Vector Database      |
+| Version Control      | Git                 |
+
+---
+
+## 📂 Project Structure
+
+```
+├── data/                   # Raw and processed dataset metadata
+├── pipeline/                # Ingestion, cleaning, and chunking scripts
+├── embeddings/               # Embedding generation using Spark
+├── vector_store/             # Vector DB indexing and retrieval logic
+├── quality_checks/           # Automated data validation scripts
+├── requirements.txt
+└── README.md
+```
+
+*(Update the structure above to match your actual repository layout.)*
+
+---
+
+## ⚙️ How It Works
+
+1. **Ingestion** — Multimodal dataset metadata is collected across 71 sign language classification categories.
+2. **Cleaning & Chunking** — Raw metadata is cleaned, normalized, and split into retrievable chunks.
+3. **Embedding Generation** — Apache Spark workflows generate high-dimensional vector embeddings at scale.
+4. **Indexing** — Embeddings are indexed into a Vector Database for fast semantic retrieval.
+5. **Quality Assurance** — Automated checks validate data consistency and enforce standardized storage structures.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 pip install -r requirements.txt
+```
 
-----------------------------------------------------
-USAGE
-----------------------------------------------------
-Run the Streamlit App:
-Command:
-streamlit run app.py
+---
 
-Run via Python Script:
-Command:
-python main.py
+## ▶️ Usage
 
-- Place images in the 'data/' folder for recognition
-- Processed dataset is saved in 'Processed_Dataset/'
+```bash
+python pipeline/run_pipeline.py --input data/raw --output data/processed
+```
 
-----------------------------------------------------
-PROJECT STRUCTURE
-----------------------------------------------------
-Sign_Language_Recognition/
-│
-├─ Letter/                 (Raw letter images)
-├─ Number/                 (Raw number images)
-├─ Gesture/                (Raw gesture images)
-├─ Processed_Dataset/      (Cleaned dataset using MediaPipe)
-├─ models/                 (Saved trained models .keras, .h5)
-├─ app.py                  (Streamlit app)
-├─ main.py                 (Main recognition script)
-├─ requirements.txt        (Python dependencies)
-├─ .gitignore
-└─ README.txt
+*(Update commands/flags to match your actual entry point.)*
 
-----------------------------------------------------
-AUTHOR
-----------------------------------------------------
-Tanishq Saini
-| CDAC Bangalore | DBDA | Aug 2025 - Feb 2026
+---
 
-----------------------------------------------------
-LICENSE
-----------------------------------------------------
-This project is licensed under the MIT License
+## 📈 Impact
+
+- Eliminated training dataset inconsistencies through automated quality checks.
+- Enabled scalable, high-dimensional embedding generation across a large multimodal dataset.
+- Improved retrievability and structure of metadata for downstream Sign Language Recognition model training.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
