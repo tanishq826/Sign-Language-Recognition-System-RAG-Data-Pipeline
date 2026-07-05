@@ -1,7 +1,7 @@
 # Sign Language Recognition System — RAG Data Pipeline
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+[![Apache Spark](https://img.shields.io/badge/ApacheSpark-4.1.2-orange.svg)](https://www.apachespark.org/)
 [![Vector DB](https://img.shields.io/badge/VectorDB-1.x-brightgreen.svg)](https://vectordb.io/)
 ![Git](https://img.shields.io/badge/Git-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
