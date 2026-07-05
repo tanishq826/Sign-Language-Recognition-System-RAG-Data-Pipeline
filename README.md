@@ -1,4 +1,4 @@
-# Sign Language Recognition System 
+# Sign Language Recognition System — RAG Data Pipeline
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
