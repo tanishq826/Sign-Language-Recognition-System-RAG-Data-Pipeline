@@ -2,8 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![Apache Spark](https://img.shields.io/badge/ApacheSpark-4.1.2-orange.svg)](https://www.apachespark.org/)
-[![Vector DB](https://img.shields.io/badge/VectorDB-1.x-brightgreen.svg)](https://vectordb.io/)
-![Git](https://img.shields.io/badge/Git-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+[![Vector DB](https://img.shields.io/badge/VectorDB-v1.18.x-brightgreen.svg)](https://vectordb.io/)
+[![Git](https://img.shields.io/badge/Git-2.55.0-grey.svg)](https://git.io/)
 
 
 A scalable **Retrieval-Augmented Generation (RAG) data pipeline** built to ingest, clean, and prepare multimodal sign language dataset metadata for downstream model training. The pipeline handles **71 classification categories**, leveraging distributed processing and vector search to ensure high-quality, consistent training data.
